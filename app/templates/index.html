@@ -1,0 +1,128 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+
+	{% extends 'base.html'%}
+
+	{% block content %}
+		{% if not name_index_display %}
+    		<div class="content-block" id="contact">
+				<div class="container text-center">
+					<header class="block-heading cleafix">
+						<h1>登录</h1>
+						{% for message in get_flashed_messages() %}
+                             <p>{{ message }}</p>
+						{% endfor %}
+					</header>
+					<section class="block-body">
+						<div class="row">
+							<div class="col-md-6 col-md-offset-3">
+								<form action="/login" name="Login_Form" method="post">
+									<div class="form-group">
+								    	<input type="account" class="form-control form-control-white" name="account" placeholder="账号" required>
+								  	</div>
+								    <div class="form-group">
+								    	<input type="password" class="form-control form-control-white" name="password" placeholder="密码" required>
+								    </div>
+								  <input type="submit" onsubmit="submit()" class="btn btn-o-white" value="登录">
+									<a href="/to_regist"><input type="button" class="btn btn-o-white" value="注册"></a>
+								</form>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div><!-- #contact -->
+		{% endif %}
+
+		<div class="content-block parallax" id="parallax">
+				<div class="container text-center">
+					<h1>In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. Etiam nulla magna, gravida eget ultricies sit amet, hendrerit.</h1>
+					<a href="" class="btn btn-o-white btn-lg">Get a free quote</a>
+				</div>
+		</div><!-- #parallax -->
+
+			<div class="content-block" id="blog">
+				<div class="container">
+					<header class="block-heading cleafix">
+						<a href="#" class="btn btn-o btn-lg pull-right">更多</a>
+						<h1>文章</h1>
+						<p>精华推荐</p>
+					</header>
+					<section class="block-body">
+						<div class="row">
+							<div class="col-sm-4 blog-post">
+								<img src="/images/bike_water1-1000x600.jpg">
+								<a href="#"><h2>Design Your Mind</h2></a>
+								<div class="date">3 Nov, 2014</div>
+								<p>In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. Etiam nulla magna, gravida eget ultricies sit amet, hendrerit in lorem.</p>
+								<a href="">Read More</a>
+							</div>
+							<div class="col-sm-4 blog-post">
+								<img src="/images/mac_glasses1-1000x600.jpg">
+								<a href="#"><h2>Winter Is Comming</h2></a>
+								<div class="date">3 Nov, 2014</div>
+								<p>In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. Etiam nulla magna, gravida eget ultricies sit amet, hendrerit in lorem.</p>
+								<a href="">Read More</a>
+							</div>
+							<div class="col-sm-4 blog-post">
+								<img src="/images/road-1000x600.jpg">
+								<a href="#"><h2>The Illustration</h2></a>
+								<div class="date">3 Nov, 2014</div>
+								<p>In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. Etiam nulla magna, gravida eget ultricies sit amet, hendrerit in lorem.</p>
+								<a href="">Read More</a>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div><!-- #blog -->
+
+			<div class="content-block" id="portfolio">
+				<div class="container">
+					<header class="block-heading cleafix">
+						<a href="#" class="btn btn-o btn-lg pull-right">更多</a>
+						<h1>照片墙</h1>
+						<p>热门图片</p>
+					</header>
+					<section class="block-body">
+						<div class="row">
+							<div class="col-sm-4">
+								<a href="#" class="recent-work" style="background-image:url(/images/a1.jpg)">
+									<span class="btn btn-o-white">Lorem Rocks</span>
+								</a>
+							</div>
+							<div class="col-sm-4">
+								<a href="#" class="recent-work" style="background-image:url(/images/a2.jpg)">
+									<span class="btn btn-o-white">Lorem Rocks</span>
+								</a>
+							</div>
+							<div class="col-sm-4">
+								<a href="#" class="recent-work" style="background-image:url(/images/a3.jpg)">
+									<span class="btn btn-o-white">Lorem Rocks</span>
+								</a>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-4">
+								<a href="#" class="recent-work" style="background-image:url(/images/wood-320x240.jpg)">
+									<span class="btn btn-o-white">Lorem Rocks</span>
+								</a>
+							</div>
+							<div class="col-sm-4">
+								<a href="#" class="recent-work" style="background-image:url(/images/bike-320x240.jpg)">
+									<span class="btn btn-o-white">Lorem Rocks</span>
+								</a>
+							</div>
+							<div class="col-sm-4">
+								<a href="#" class="recent-work" style="background-image:url(/images/six_1-320x240.jpg)">
+									<span class="btn btn-o-white">Lorem Rocks</span>
+								</a>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div><!-- #portfolio -->
+	{% endblock%}
+</body>
+</html>
