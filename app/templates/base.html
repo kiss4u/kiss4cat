@@ -44,50 +44,66 @@
 			<div class="cross text-right">
 				<a class="toggleDrawer" href="#"><i class="fa fa-times-circle fa-2x"></i></a>
 			</div>
+			<nav>
+				<ul class="nav nav-pills nav-stacked">
+			{% if name_index_display %}
 
-        <!
-                {% if name_index_display %}
-                    <h2><a class="logo" href="">{{ name_index_display }}</a></h2>
-                    <li>
-						<a href="#" onclick="window.location = '/logout'"><i class="fa fa-phone-square"></i> 注销</a>
+					<h2>{{ name_index_display }}</h2>在线时长
+
+					<li>
+						<a href="#" onclick="window.location = '/#blog'"><i class="fa fa-bookmark"></i> 博客</a>
 					</li>
-                {% endif %}
-        -->
-        
+					<li>
+						<a href="#" onclick="window.location = '/#portfolio'"><i class="fa fa-heart"></i> 照片</a>
+					</li>
+					<li>
+						<a href="#" onclick="window.location = '/logout'"><i class="fa fa-home"></i> 注销</a>
+					</li>
+			{% else %}
+					<li>
+						<a href="#" onclick="window.location = '/to_login_div#contact'"><i class="fa fa-home"></i> 登录</a>
+					</li>
+
+			{% endif %}
+				</ul>
+			</nav>
+
+			<!-- 待定
             <nav>
 				<ul class="nav nav-pills nav-stacked">
 					<li>
-						<a href="#wrapper"><i class="fa fa-home"></i> Home</a>
+						<a href="#" onclick="window.location = ''"><i class="fa fa-thumbs-up"></i> no</a>
 					</li>
 					<li>
-						<a href="#portfolio"><i class="fa fa-bookmark"></i> Portfolio</a>
+						<a href="#" onclick="window.location = ''"><i class="fa fa-phone-square"></i> no</a>
 					</li>
 					<li>
-						<a href="#blog"><i class="fa fa-wordpress"></i> Blog</a>
+						<a href="#" onclick="window.location = ''"><i class="fa fa-wordpress"></i> no</a>
 					</li>
 					<li>
-						<a href="#parallax"><i class="fa fa-heart"></i> Parallax</a>
+						<a href="#" onclick="window.location = ''"><i class="fa fa-tasks"></i> no</a>
 					</li>
 				</ul>
 			</nav>
+			-->
 
 		</div><!-- #drawer-right -->
 
 		<div id="wrapper">
-
 			<div id="header" class="content-block header-wrapper">
 				<div class="header-wrapper-inner">
 					<section class="top clearfix">
 						<div class="pull-right">
-                            <h4>
-                                {% if name_index_display %}
-                                    {{ name_index_display }}&nbsp;
+                            <h5>
+                             <!--{% if name_index_display %}
+                                    {{ name_index_display }}
                                     <a class="logo" href="/logout">注销</a>
-                                {% endif %}
+                                {% endif %}-->
                                 <a class="toggleDrawer" href="#"><i class="fa fa-bars fa-2x"></i></a>
-                             </h4>
+                             </h5>
                         </div>
 					</section>
+					<!--
 					<section class="center">
                         <div class="secondary-slogan">
 							Life is short
@@ -102,9 +118,9 @@
 							<img src="/images/arrow_down.png">
 						</a>
 					</section>
+					-->
 				</div>
 			</div><!-- header -->
-
 		</div><!--/#wrapper-->
 
 		<script src="/js/jquery-2.1.3.min.js"></script>

@@ -109,7 +109,7 @@ h1, h2, h3, h4, h5, h6{
 	background: url(../images/header-bg.jpg) no-repeat center center;
 	background-size: cover;
 	display: table;
-	height: 100vh;
+	height: 9vh;
 	width: 100%;
 	position: relative;
 	z-index: 1;

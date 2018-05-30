@@ -7,7 +7,7 @@
 	{% extends 'base.html'%}
 
 	{% block content %}
-		{% if not name_index_display %}
+		{% if show_login_div%}
     		<div class="content-block" id="contact">
 				<div class="container text-center">
 					<header class="block-heading cleafix">
@@ -36,6 +36,7 @@
 			</div><!-- #contact -->
 		{% endif %}
 
+
 		<div class="content-block parallax" id="parallax">
 				<div class="container text-center">
 					<h1>In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. Etiam nulla magna, gravida eget ultricies sit amet, hendrerit.</h1>
@@ -43,6 +44,7 @@
 				</div>
 		</div><!-- #parallax -->
 
+		{% if name_index_display %}
 			<div class="content-block" id="blog">
 				<div class="container">
 					<header class="block-heading cleafix">
@@ -123,6 +125,7 @@
 					</section>
 				</div>
 			</div><!-- #portfolio -->
+		{% endif %}
 	{% endblock%}
 </body>
 </html>

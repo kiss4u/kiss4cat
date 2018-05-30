@@ -43,10 +43,17 @@ def regist():
             db.session.rollback()
             return render_template('regist.html', error='注册失败')
 
-# 跳转登陆
+# 跳转登陆口1
 @main.route("/to_login")
 def to_login():
     return render_template('login.html')
+
+# 跳转登陆口2
+@main.route('/to_login_div')
+def to_login_div():
+    if 'username' not in session:
+        return render_template('index.html', show_login_div=True)
+    return render_template('index.html')
 
 # 登录
 @main.route('/login', methods=['GET', 'POST'])
@@ -60,7 +67,7 @@ def login():
             account = Account.query.filter_by(account=form_account, password=form.password.data).first()
             if account is not None:
                 session['username'] = account.username
-                print('[%s]用户%s登录'%(account.account,account.username))
+                print('[%s]用户%s登录'%(account.account, account.username))
             else:
                 flash('无效用户名或密码.')
                 #return render_template('login.html',form=form)
