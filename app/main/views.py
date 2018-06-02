@@ -62,15 +62,17 @@ def login():
         form = Login_Form(request.form)
         if form is None:
             flash('Should input username and password')
+            return render_template('index.html', show_login_div=True)
         elif form.submit():
             form_account = form.account.data
             account = Account.query.filter_by(account=form_account, password=form.password.data).first()
-            if account is not None:
-                session['username'] = account.username
-                print('[%s]用户%s登录'%(account.account, account.username))
-            else:
+            if account is None:
                 flash('无效用户名或密码.')
-                #return render_template('login.html',form=form)
+                # return render_template('login.html',form=form)
+                return render_template('index.html', show_login_div=True)
+            else:
+                session['username'] = account.username
+                print('[%s]用户%s登录' % (account.account, account.username))
     return redirect(url_for('main.index'))
 
 # 登出
