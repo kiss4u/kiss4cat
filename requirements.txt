@@ -11,7 +11,7 @@ chardet==3.0.4
 click==6.7
 cocos2d==0.6.5
 constantly==15.1.0
-cryptography==1.6
+cryptography==3.2
 cssselect==1.0.0
 cx-Freeze==5.1.1
 Cython==0.25.1
