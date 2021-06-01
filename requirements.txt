@@ -67,7 +67,7 @@ six==1.10.0
 splinter==0.7.7
 SQLAlchemy==1.2.7
 Twisted==16.5.0
-urllib3==1.22
+urllib3==1.26.5
 virtualenv==15.1.0
 visitor==0.1.3
 w3lib==1.16.0
