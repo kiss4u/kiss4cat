@@ -55,7 +55,7 @@ python-docx==0.8.6
 python-editor==1.0.3
 python-magic==0.4.15
 python-magic-bin==0.4.14
-pywin32==220
+pywin32==301
 queuelib==1.4.2
 redis==2.10.6
 requests==2.18.4
