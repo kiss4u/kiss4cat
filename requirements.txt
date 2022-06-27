@@ -34,7 +34,7 @@ libmagic==1.0
 lxml==3.6.4
 Mako==1.0.7
 MarkupSafe==1.0
-mysql-connector-python==8.0.5
+mysql-connector-python==8.0.14
 numpy==1.14.3
 olefile==0.44
 parsel==1.1.0
